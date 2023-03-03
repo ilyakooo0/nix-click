@@ -20,7 +20,7 @@
           };
         } (p: {
           contents = [ ];
-          exec = "${p.gnome.gnome-weather}/bin/epiphany";
+          exec = "${p.gnome.gnome-weather}/bin/weather";
           manifest = {
             name = "soy.iko.weather";
             version = "1.0.0";
