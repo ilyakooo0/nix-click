@@ -11,7 +11,7 @@
   outputs = { self, nixpkgs, flake-utils, nix-click }:
     flake-utils.lib.eachDefaultSystem (system: {
       packages = {
-        inherit nix-click;
+        nix-click = nix-click.packages.${system};
         default = nix-click.packages.${system}.buildAll {
           name = "yubioath";
           supportedPlatforms = {
